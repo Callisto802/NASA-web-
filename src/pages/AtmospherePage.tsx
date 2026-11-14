@@ -486,16 +486,22 @@ export function AtmospherePage({
             }}
           >
             <div className="field">
-              <label htmlFor="scenario-o2">{t("Oxygen concentration (%)")}</label>
+              <label htmlFor="scenario-o2-input">{t("Oxygen concentration (%)")}</label>
               <input
-                id="scenario-o2"
+                id="scenario-o2-input"
                 className="input input--mono"
                 type="number"
                 min={0}
                 max={100}
                 step={0.5}
                 value={oxygen}
-                onChange={(event) => setOxygen(Math.max(0, Math.min(100, Number(event.target.value))))}
+                onChange={(event) =>
+                  updateLabState({
+                    ...labState,
+                    preset: "custom",
+                    oxygenPercent: Math.max(0, Math.min(100, Number(event.target.value))),
+                  })
+                }
               />
               <input
                 type="range"
@@ -503,14 +509,20 @@ export function AtmospherePage({
                 max={100}
                 step={0.5}
                 value={oxygen}
-                onChange={(event) => setOxygen(Number(event.target.value))}
+                onChange={(event) =>
+                  updateLabState({
+                    ...labState,
+                    preset: "custom",
+                    oxygenPercent: Number(event.target.value),
+                  })
+                }
                 aria-label={t("Oxygen concentration slider")}
               />
             </div>
             <div className="field">
-              <label htmlFor="scenario-pressure">{t("Pressure (psia)")}</label>
+              <label htmlFor="scenario-pressure-input">{t("Pressure (psia)")}</label>
               <input
-                id="scenario-pressure"
+                id="scenario-pressure-input"
                 className="input input--mono"
                 type="number"
                 min={0}
@@ -518,7 +530,11 @@ export function AtmospherePage({
                 step={0.1}
                 value={pressure}
                 onChange={(event) =>
-                  setPressure(Math.max(0, Math.min(48, Number(event.target.value))))
+                  updateLabState({
+                    ...labState,
+                    preset: "custom",
+                    pressurePsi: Math.max(0, Math.min(48, Number(event.target.value))),
+                  })
                 }
               />
               <input
@@ -527,17 +543,31 @@ export function AtmospherePage({
                 max={48}
                 step={0.1}
                 value={pressure}
-                onChange={(event) => setPressure(Number(event.target.value))}
+                onChange={(event) =>
+                  updateLabState({
+                    ...labState,
+                    preset: "custom",
+                    pressurePsi: Number(event.target.value),
+                  })
+                }
                 aria-label={t("Pressure slider")}
               />
             </div>
             <div className="field">
-              <label htmlFor="scenario-gravity">{t("Gravity level")}</label>
+              <label htmlFor="scenario-gravity-select">{t("Gravity level")}</label>
               <select
-                id="scenario-gravity"
+                id="scenario-gravity-select"
                 className="select"
                 value={gravityId}
-                onChange={(event) => setGravityId(event.target.value)}
+                onChange={(event) => {
+                  const selectedRatio =
+                    GRAVITY_OPTIONS.find((option) => option.id === event.target.value)?.ratio ?? 0;
+                  updateLabState({
+                    ...labState,
+                    preset: "custom",
+                    gravityG: selectedRatio,
+                  });
+                }}
               >
                 {GRAVITY_OPTIONS.map((option) => (
                   <option key={option.id} value={option.id}>

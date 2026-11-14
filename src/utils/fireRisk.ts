@@ -210,7 +210,7 @@ function matchInvestigations(
   material: MaterialOption,
   investigations: PSIInvestigation[],
 ): string[] {
-  const matches: { id: string; score: number } = [];
+  const matches: { id: string; score: number }[] = [];
 
   for (const inv of investigations) {
     let relevance = 0;
