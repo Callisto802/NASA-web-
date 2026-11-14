@@ -1,0 +1,11 @@
+node_modules/
+dist/
+shots/
+tools/
+*.local
+.DS_Store
+
+# Secrets: keep every real environment file out of Git.
+.env
+.env.*
+!.env.example

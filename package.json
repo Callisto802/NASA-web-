@@ -1,0 +1,31 @@
+{
+  "name": "psi-fire-safety-explorer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "NASA PSI Microgravity Fire Safety & Combustion Research Explorer",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "refresh:psi-catalog": "node scripts/refresh-psi-catalog.mjs",
+    "start": "node server/index.mjs",
+    "preview": "node server/index.mjs",
+    "test": "node --test server/assistant.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@google/genai": "^3.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

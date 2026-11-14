@@ -1,0 +1,44 @@
+[
+  {
+    "term": "Buoyancy",
+    "plain": "Hot gas is less dense than cool gas, so on Earth it rises. In a flame this rising flow drags air in and shapes the flame. In microgravity there is almost no buoyant rise, so other flows — ventilation, diffusion, electric fields — dominate.",
+    "source": "Combustion Science page, NASA Glenn",
+    "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/"
+  },
+  {
+    "term": "Diffusion flame",
+    "plain": "A flame where fuel and oxidiser meet and burn where they mix, rather than being pre-mixed. A candle is the everyday example. Most of the investigations here study non-premixed (diffusion) flames.",
+    "source": "Space Station's Quest for the Secrets of Fire, NASA",
+    "url": "https://www.nasa.gov/humans-in-space/space-stations-quest-for-the-secrets-of-fire/"
+  },
+  {
+    "term": "Ventilation and forced flow",
+    "plain": "Moving air changes how a flame spreads. In microgravity, fans or cabin airflow can be the main reason a flame continues to grow; stopping ventilation is an established spacecraft firefighting step.",
+    "source": "PSI-20 (ACME BRE) record and NASA/TM-20210011385",
+    "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20"
+  },
+  {
+    "term": "Limiting oxygen index (LOI)",
+    "plain": "The lowest oxygen concentration, in a given mixture and configuration, that will support steady burning. It is not a single universal number: pressure, diluent, material and flow all change it.",
+    "source": "PSI-69 (FLEX) record — LOI procedure",
+    "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69"
+  },
+  {
+    "term": "Cool flame",
+    "plain": "A weak, low-temperature flame (peak temperatures roughly 500–1000 K in the CFI-G description) that can burn fuel without the hot, bright combustion usually associated with fire. Cool flames matter for ignition and engine chemistry, and they can appear in droplet experiments.",
+    "source": "PSI-159 (ACME CFI-G) record",
+    "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159"
+  },
+  {
+    "term": "Smoke and aerosols",
+    "plain": "Smoke is not one substance. Hydrocarbon fuels tend to make soot particles; plastics can make droplets of recondensed polymer fragments. Particle size affects whether a detector alarms — a key question for SAME and DAFT.",
+    "source": "Combustion Science page, NASA Glenn (SAME summary)",
+    "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/"
+  },
+  {
+    "term": "Reduced gravity",
+    "plain": "Gravity levels below Earth's. Microgravity is close to weightless; the Moon is about one-sixth of Earth's gravity and Mars about 0.38. Flames at reduced gravity can differ in shape, spread rate and extinction because buoyant flow is weaker or absent.",
+    "source": "NASA NSSDC Moon and Mars fact sheets, and NASA combustion science overview",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  }
+]
